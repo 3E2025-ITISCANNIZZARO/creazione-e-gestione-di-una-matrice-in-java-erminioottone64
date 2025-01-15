@@ -12,40 +12,50 @@
 
 public class Main {
     public static void main(String[] args) {
-        // Creazione e popolamento della matrice
         int[][] matrix = new int[3][3];
         Random random = new Random();
-        // COMPLETARE IL CODICE
-
-      
-
-        // Stampa della matrice
+            for (int i = 0; i < 3; i++){
+                for (int j = 0; j < 3; j++){
+                    matrix[i][j] = (int) (math.random()*10+1);
+                }
+            }
+        
         System.out.println("Matrice:");
-        // COMPLETARE IL CODICE
-
-
-        // Calcolo della somma degli elementi
+        for (int i = 0; i<3; i++)){
+            for (int j = 0; j<3; j++){
+                System.out.print(matrix[i][j]+" ");
+            }
+            System.out.println(" ");
+        }
+        
         int sum = calculateSum(matrix);
         System.out.println("Somma degli elementi: " + sum);
 
-        // Ricerca del valore massimo
+        
         int max = findMax(matrix);
         System.out.println("Valore massimo: " + max);
     }
 
     public static int calculateSum(int[][] matrix) {
         int sum = 0;
-   
-// COMPLETARE IL CODICE
-      
+        fot (int i=0;i<3;i++){
+            fort (int j=0; j<3; j++){
+                sum+matrix[i][j];
+            }
+        }
+
         return sum;
     }
 
     public static int findMax(int[][] matrix) {
         int max = matrix[0][0];
-
-// COMPLETARE IL CODICE
-      
+        for(int i=0; i<3; i++){
+                for (int j=1;j<3;j++){
+                    if(matrix[i][j]>max)
+                    max=matrix[i][j];
+                }
+            }
+            System.out.println(max);
         return max;
     }
 }
